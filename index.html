@@ -57,7 +57,7 @@
     <section class="hero">
 
       <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-      <button type="button" class="button">Замовити послугу</button>
+      <button type="button" class="button" data-modal-open>Замовити послугу</button>
 
 
 
@@ -117,20 +117,22 @@
           <li class="work-item">
 
             <div class="thumb">
-              <img src="images/img1.jpg" alt="крупним планом програміст працює за своїм столом" width="370">
+              <img class="work-img" src="images/img1.jpg" alt="крупним планом програміст працює за своїм столом"
+                width="370">
               <div class="thumb-title">Десктопні додатки</div>
             </div>
 
           </li>
           <li class="work-item">
             <div class="thumb">
-              <img src="images/img2.jpg" alt="розробник працює с інтерфейсом мобільного додатку" width="370">
+              <img class="work-img" src="images/img2.jpg" alt="розробник працює с інтерфейсом мобільного додатку"
+                width="370">
               <div class="thumb-title">Мобільні додатки</div>
             </div>
           </li>
           <li class="work-item">
             <div class="thumb">
-              <img src="images/img3.jpg" alt="веб-дизайнер обирає колір на палітрі" width="370">
+              <img class="work-img" src="images/img3.jpg" alt="веб-дизайнер обирає колір на палітрі" width="370">
               <div class="thumb-title">Дизайнерські рішення</div>
             </div>
           </li>
@@ -404,6 +406,17 @@
 
     </div>
   </footer>
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close-btn" type="button" data-modal-close>
+        <svg class="close-icon" width="11" height="11">
+          <use href="./images/sprites/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 
