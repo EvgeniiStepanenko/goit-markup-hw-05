@@ -121,6 +121,10 @@ body {
 	margin-right: 50px;
 }
 
+.link.current {
+	color: var(--accent);
+}
+
 .current::after {
 	content: '';
 	position: absolute;
@@ -129,6 +133,9 @@ body {
 	height: 4px;
 	width: 100%;
 
+	transform: scaleX(1.1);
+
+	
 	border-radius: 2px;
 	background-color: var(--accent);
 
@@ -337,12 +344,15 @@ body {
 	display: block;
 }
 .thumb-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	min-height: 70px;
 	width: 100%;
-	padding: 27px;
+	
 
 	text-align: center;
 	text-transform: uppercase;
@@ -461,10 +471,15 @@ body {
 
 
 .clients-link {
-	display: block;
-	padding: 16px 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 170px;
+	min-height: 92px;
+	
 	border: 1px solid #AFB1B8;
     border-radius: 4px;
+	color: #AFB1B8;
 
 	transition: 
 	color 250ms var(--cubic-bezier), 
@@ -479,7 +494,7 @@ body {
 }
 
 .clients-icon {
-	fill: #afb1b8;
+	fill: currentColor;
 
 	transition: fill 250ms var(--cubic-bezier);
 
@@ -487,7 +502,7 @@ body {
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-	fill: currentColor;
+	/* fill: currentColor; */
 }
  /*------------------------------------- футер -------------------------------*/
  .footer {
@@ -640,7 +655,15 @@ body {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 	cursor: pointer;
+
+	transition: background-color 250ms var(--cubic-bezier);
 }
+
+.close-btn:hover,
+.close-btn:focus {
+	background-color: var(--accent);
+}
+
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;
@@ -658,12 +681,16 @@ body {
 	margin-bottom: 34px;
   }
 
+  
+
   .btn-item:not(:last-child) {
 
 	margin-right: 8px;
 
   }
 .filter {
+		padding: 6px 22px;
+
 		border-radius: 4px;
 		font-weight: 700;
 		font-size: 16px;
@@ -736,6 +763,8 @@ body {
  }
  .portfolio-card .link{
 	display: block;
+
+	transition: box-shadow 250ms var(--cubic-bezier);
 
  }
 
